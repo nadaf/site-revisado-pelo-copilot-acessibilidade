@@ -1,0 +1,685 @@
+/* ==========================================
+   VOTO SUSTENTÁVEL E ACESSÍVEL - ESTILOS
+   Cores da Bandeira Brasileira
+   Amarelo Ouro: #FFD700
+   Azul Royal: #0038A8
+   Verde: #009B3A
+   Branco: #FFFFFF
+   ========================================== */
+
+:root {
+    --amarelo-ouro: #FFD700;
+    --azul-royal: #0038A8;
+    --verde-brasil: #009B3A;
+    --branco: #FFFFFF;
+    --cinza-claro: #F5F5F5;
+    --cinza-medio: #666666;
+    --preto: #1A1A1A;
+    --sombra: rgba(0, 56, 168, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: var(--preto);
+    background-color: var(--branco);
+}
+
+/* ==========================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================== */
+
+header {
+    background: linear-gradient(135deg, var(--azul-royal) 0%, #0052CC 100%);
+    color: var(--branco);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--sombra);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+    .logo img {
+        height: 60px;
+        width: auto;
+    }
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--amarelo-ouro);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    background: var(--amarelo-ouro);
+    border: none;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: var(--azul-royal);
+    font-weight: bold;
+}
+
+    .menu-toggle:hover {
+        background: #FFC700;
+    }
+
+    .menu-toggle:focus {
+        outline: 3px solid var(--branco);
+        outline-offset: 2px;
+    }
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+    .nav-links li a {
+        color: var(--branco);
+        text-decoration: none;
+        padding: 0.75rem 1.25rem;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        display: block;
+        font-weight: 500;
+    }
+
+        .nav-links li a:hover,
+        .nav-links li a:focus {
+            background-color: var(--amarelo-ouro);
+            color: var(--azul-royal);
+            transform: translateY(-2px);
+        }
+
+        .nav-links li a.active {
+            background-color: var(--amarelo-ouro);
+            color: var(--azul-royal);
+            font-weight: 700;
+        }
+
+/* ==========================================
+   CONTAINER PRINCIPAL
+   ========================================== */
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    min-height: calc(100vh - 200px);
+}
+
+.container {
+    background: var(--branco);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px var(--sombra);
+}
+
+/* ==========================================
+   TIPOGRAFIA
+   ========================================== */
+
+h1 {
+    color: var(--azul-royal);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 4px solid var(--amarelo-ouro);
+    line-height: 1.3;
+}
+
+h2 {
+    color: var(--azul-royal);
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    padding-left: 1rem;
+    border-left: 5px solid var(--amarelo-ouro);
+}
+
+h3 {
+    color: var(--verde-brasil);
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    color: var(--azul-royal);
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+}
+
+h5 {
+    color: var(--verde-brasil);
+    font-size: 1.1rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+h6 {
+    color: var(--cinza-medio);
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+
+strong, b {
+    color: var(--azul-royal);
+    font-weight: 700;
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* ==========================================
+   LISTAS
+   ========================================== */
+
+ul, ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2.5rem;
+}
+
+    ul li, ol li {
+        margin-bottom: 0.75rem;
+        line-height: 1.7;
+    }
+
+        ul li::marker {
+            color: var(--amarelo-ouro);
+            font-size: 1.2em;
+        }
+
+        ol li::marker {
+            color: var(--azul-royal);
+            font-weight: bold;
+        }
+
+/* ==========================================
+   IMAGENS
+   ========================================== */
+
+.image-container {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px var(--sombra);
+        transition: transform 0.3s ease;
+    }
+
+        .image-container img:hover {
+            transform: scale(1.02);
+        }
+
+.image-caption {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--cinza-medio);
+    font-style: italic;
+}
+
+/* ==========================================
+   NAVEGAÇÃO DE PÁGINAS
+   ========================================== */
+
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--cinza-claro);
+    gap: 1rem;
+}
+
+    .page-navigation a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 1.5rem;
+        background: var(--amarelo-ouro);
+        color: var(--azul-royal);
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 10px rgba(255, 215, 0, 0.3);
+    }
+
+        .page-navigation a:hover,
+        .page-navigation a:focus {
+            background: var(--azul-royal);
+            color: var(--amarelo-ouro);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 56, 168, 0.4);
+        }
+
+        .page-navigation a:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+/* ==========================================
+   RODAPÉ
+   ========================================== */
+
+footer {
+    background: linear-gradient(135deg, var(--verde-brasil) 0%, #007A2F 100%);
+    color: var(--branco);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+    footer p {
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    footer a {
+        color: var(--amarelo-ouro);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+        footer a:hover,
+        footer a:focus {
+            text-decoration: underline;
+        }
+
+/* ==========================================
+   ACESSIBILIDADE
+   ========================================== */
+
+/* Skip to content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--amarelo-ouro);
+    color: var(--azul-royal);
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 100;
+}
+
+    .skip-link:focus {
+        top: 0;
+    }
+
+/* Focus styles */
+*:focus {
+    outline: 3px solid var(--amarelo-ouro);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --azul-royal: #0000CC;
+        --amarelo-ouro: #FFFF00;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+   ========================================== */
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+        order: 3;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links li {
+            width: 100%;
+        }
+
+            .nav-links li a {
+                width: 100%;
+                text-align: center;
+            }
+
+    main {
+        padding: 0 1rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .page-navigation {
+        flex-direction: column;
+    }
+
+        .page-navigation a {
+            width: 100%;
+            justify-content: center;
+        }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    ul, ol {
+        padding-left: 1.5rem;
+    }
+}
+
+/* ==========================================
+   UTILITÁRIOS
+   ========================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    background-color: var(--amarelo-ouro);
+    color: var(--azul-royal);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   PÁGINA INICIAL
+   ========================================== */
+
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, var(--azul-royal) 0%, var(--verde-brasil) 100%);
+    color: var(--branco);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+    .hero h1 {
+        color: var(--amarelo-ouro);
+        border-bottom: none;
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+.chapters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.chapter-card {
+    background: var(--cinza-claro);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 5px solid var(--amarelo-ouro);
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+    .chapter-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px var(--sombra);
+        border-left-color: var(--azul-royal);
+    }
+
+    .chapter-card h3 {
+        color: var(--azul-royal);
+        margin-top: 0;
+        font-size: 1.2rem;
+    }
+
+    .chapter-card a {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        background: var(--amarelo-ouro);
+        color: var(--azul-royal);
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+        .chapter-card a:hover,
+        .chapter-card a:focus {
+            background: var(--azul-royal);
+            color: var(--amarelo-ouro);
+        }
+
+/* Print styles */
+@media print {
+    header, footer, .page-navigation, .menu-toggle {
+        display: none;
+    }
+
+    main {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+}
+
+/* ==========================================
+   VÍDEOS DO YOUTUBE RESPONSIVOS
+   ========================================== */
+
+.youtube-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding-bottom: 56.25%; /* Proporção 16:9 (9/16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 56, 168, 0.3);
+    background: #000;
+}
+
+    .youtube-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+        .youtube-container iframe:focus {
+            outline: 3px solid var(--amarelo-ouro);
+            outline-offset: 2px;
+        }
+
+    /* Proporções alternativas */
+    .youtube-container.ratio-4-3 {
+        padding-bottom: 75%; /* 3/4 = 75% */
+    }
+
+    .youtube-container.ratio-21-9 {
+        padding-bottom: 42.857%; /* 9/21 = 42.857% */
+    }
+
+/* Responsividade para YouTube em mobile */
+@media (max-width: 768px) {
+    .youtube-container {
+        max-width: 100%;
+        margin: 1.5rem 0;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .youtube-container {
+        margin: 1rem 0;
+    }
+}
+
+header {
+    border: 0px solid red;
+    box-shadow: 0px 0px 15px 10px rgba(0,0,0,0.2);
+    background: #021430;
+    background: linear-gradient(90deg,rgba(2, 20, 48, 1) 0%, rgba(2, 20, 48, 1) 17%, rgba(0, 61, 174, 1) 49%);
+}
+
+nav {
+    border: 0px solid red;
+    margin: 0;
+}
+
+    nav ul {
+        border: 0px solid red;
+        margin: 0;
+    }
+
+    nav > ul > li {
+        border: 0px solid #003dae;
+        margin: 0;
+        padding: 0px;
+    }
+
+        nav > ul > li > a {
+            margin: 0;
+            padding: 1px 8px !important;
+        }
+
+h1, h2, h3, h4, h5, p, strong, span {
+    line-height: 130%;
+}
