@@ -3,6 +3,7 @@
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', function() {
+    const getScrollBehavior = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
     
     // ==========================================
     // MENU MOBILE TOGGLE
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const target = document.querySelector(href);
                 if (target) {
                     target.scrollIntoView({
-                        behavior: 'smooth',
+                        behavior: getScrollBehavior(),
                         block: 'start'
                     });
                     // Mover foco para o elemento alvo para acessibilidade
@@ -66,25 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
             link.setAttribute('aria-current', 'page');
         }
-    });
-
-    // ==========================================
-    // ACESSIBILIDADE - NAVEGAÇÃO POR TECLADO
-    // ==========================================
-    
-    // Adicionar indicadores visuais de foco melhorados
-    const focusableElements = document.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
-    
-    focusableElements.forEach(element => {
-        element.addEventListener('focus', function() {
-            this.style.outline = '3px solid #FFD700';
-            this.style.outlineOffset = '2px';
-        });
-        
-        element.addEventListener('blur', function() {
-            this.style.outline = '';
-            this.style.outlineOffset = '';
-        });
     });
 
     // ==========================================
@@ -153,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
     backToTop.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
+            behavior: getScrollBehavior()
         });
     });
     
@@ -175,11 +157,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-        // Garantir que todas as imagens têm alt text
-        if (!img.getAttribute('alt')) {
-            img.setAttribute('alt', 'Imagem ilustrativa do conteúdo');
-        }
-        
         // Adicionar loading lazy para performance
         img.setAttribute('loading', 'lazy');
         
@@ -193,51 +170,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     // ANÚNCIO DE MUDANÇAS PARA LEITORES DE TELA
     // ==========================================
-    function announceToScreenReader(message) {
-        const announcement = document.createElement('div');
-        announcement.setAttribute('role', 'status');
-        announcement.setAttribute('aria-live', 'polite');
-        announcement.className = 'sr-only';
-        announcement.style.cssText = 'position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;';
-        announcement.textContent = message;
-        document.body.appendChild(announcement);
-        
-        setTimeout(() => {
-            document.body.removeChild(announcement);
-        }, 1000);
-    }
+    const announcement = document.createElement('div');
+    announcement.setAttribute('role', 'status');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.style.cssText = 'position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;';
+    document.body.appendChild(announcement);
 
-    // ==========================================
-    // NAVEGAÇÃO POR TECLADO APRIMORADA
-    // ==========================================
-    document.addEventListener('keydown', function(e) {
-        // Alt + H - Ir para o topo
-        if (e.altKey && e.key === 'h') {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            announceToScreenReader('Navegando para o topo da página');
-        }
-        
-        // Alt + F - Ir para o rodapé
-        if (e.altKey && e.key === 'f') {
-            e.preventDefault();
-            const footer = document.querySelector('footer');
-            if (footer) {
-                footer.scrollIntoView({ behavior: 'smooth' });
-                announceToScreenReader('Navegando para o rodapé');
-            }
-        }
-        
-        // Alt + M - Focar no menu
-        if (e.altKey && e.key === 'm') {
-            e.preventDefault();
-            const firstNavLink = document.querySelector('.nav-links a');
-            if (firstNavLink) {
-                firstNavLink.focus();
-                announceToScreenReader('Navegando para o menu principal');
-            }
-        }
-    });
+    function announceToScreenReader(message) {
+        announcement.textContent = '';
+        window.requestAnimationFrame(() => {
+            announcement.textContent = message;
+        });
+    }
 
     // ==========================================
     // AJUSTAR CONTRASTE (ACESSIBILIDADE)
@@ -249,6 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
     contrastBtn.innerHTML = '◐';
     contrastBtn.className = 'contrast-toggle';
     contrastBtn.setAttribute('aria-label', 'Alternar alto contraste');
+    contrastBtn.setAttribute('aria-pressed', 'false');
     contrastBtn.style.cssText = `
         position: fixed;
         bottom: 6rem;
@@ -273,13 +220,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.toggle('high-contrast', highContrast);
         
         if (highContrast) {
-            document.documentElement.style.setProperty('--azul-royal', '#0000CC');
-            document.documentElement.style.setProperty('--amarelo-ouro', '#FFFF00');
             this.setAttribute('aria-pressed', 'true');
             announceToScreenReader('Alto contraste ativado');
         } else {
-            document.documentElement.style.setProperty('--azul-royal', '#0038A8');
-            document.documentElement.style.setProperty('--amarelo-ouro', '#FFD700');
             this.setAttribute('aria-pressed', 'false');
             announceToScreenReader('Alto contraste desativado');
         }
@@ -296,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     // AUMENTAR/DIMINUIR TAMANHO DA FONTE
     // ==========================================
-    let fontSize = 16;
+    let fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
     const minFontSize = 12;
     const maxFontSize = 24;
     
@@ -326,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const fontBtnStyle = `
         width: 50px;
         height: 50px;
-        background: #009B3A;
+        background: #006B2B;
         color: #FFFFFF;
         border: 2px solid #FFD700;
         border-radius: 50%;
@@ -346,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     increaseFontBtn.addEventListener('click', function() {
         if (fontSize < maxFontSize) {
-            fontSize += 2;
+            fontSize = Math.min(maxFontSize, fontSize + 2);
             document.documentElement.style.fontSize = fontSize + 'px';
             announceToScreenReader(`Fonte aumentada para ${fontSize} pixels`);
         }
@@ -354,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     decreaseFontBtn.addEventListener('click', function() {
         if (fontSize > minFontSize) {
-            fontSize -= 2;
+            fontSize = Math.max(minFontSize, fontSize - 2);
             document.documentElement.style.fontSize = fontSize + 'px';
             announceToScreenReader(`Fonte diminuída para ${fontSize} pixels`);
         }
@@ -363,12 +306,12 @@ document.addEventListener('DOMContentLoaded', function() {
     [increaseFontBtn, decreaseFontBtn].forEach(btn => {
         btn.addEventListener('mouseenter', function() {
             this.style.transform = 'scale(1.1)';
-            this.style.background = '#007A2F';
+            this.style.background = '#005522';
         });
         
         btn.addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1)';
-            this.style.background = '#009B3A';
+            this.style.background = '#006B2B';
         });
     });
 
@@ -377,11 +320,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     console.log('%c🗳️ Voto Sustentável e Acessível', 'color: #FFD700; background: #0038A8; font-size: 20px; font-weight: bold; padding: 10px;');
     console.log('%cSistema carregado com sucesso!', 'color: #009B3A; font-size: 14px;');
-    console.log('Atalhos de teclado disponíveis:');
-    console.log('- Alt + H: Ir para o topo');
-    console.log('- Alt + F: Ir para o rodapé');
-    console.log('- Alt + M: Focar no menu');
-
     // ==========================================
     // PERFORMANCE - Lazy Loading de Imagens
     // ==========================================
