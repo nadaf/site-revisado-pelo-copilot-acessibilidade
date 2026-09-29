@@ -31,8 +31,8 @@
                 <div class="nav-panel" id="primary-navigation">
                     <ul class="nav-list">
                         <li><a href="../index.html">Início</a></li>
-                        <li><a href="#destaques" aria-current="page">Referências</a></li>
-                        <li><a href="#arquivo">Arquivo documental</a></li>
+                        <li><a href="#arquivo" aria-current="page">Documentos</a></li>
+                        <li><a href="#pesquisar">Buscar no Google</a></li>
                     </ul>
                     <button class="contrast-toggle" type="button" aria-pressed="false" aria-label="Ativar alto contraste" title="Alternar alto contraste">
                         <i class="bi bi-circle-half" aria-hidden="true"></i>
@@ -47,53 +47,28 @@
             <div class="container docs-hero-inner">
                 <div class="docs-hero-copy reveal">
                     <p class="eyebrow"><span></span>Biblioteca aberta · Voto Sustentável</p>
-                    <h1 id="page-title">As ideias, pesquisas e documentos por trás da proposta.</h1>
-                    <p>Uma biblioteca para explorar as bases do voto mecatrônico, da cédula em material reciclado e dos mecanismos de conferência e auditoria.</p>
+                    <h1 id="page-title">Pesquisas, decisões e propostas sobre o voto.</h1>
+                    <p>Consulte estudos sobre segurança eleitoral, modelos de votação independente de software, materiais reciclados e documentos legislativos.</p>
                 </div>
                 <div class="docs-index reveal" aria-label="Conteúdo da biblioteca">
+                    <span class="docs-index-number">16 PDFs</span>
                     <span class="docs-index-rule"></span>
                     <span>Artigos, estudos<br>e documentos públicos</span>
                 </div>
             </div>
         </section>
 
-        <section class="docs-section section-pad" id="destaques" aria-labelledby="highlights-title">
+        <section class="google-search-section section-pad" id="pesquisar" aria-labelledby="search-title">
             <div class="container">
                 <div class="docs-section-heading reveal">
                     <div>
-                        <div class="section-marker"><span>Leituras fundamentais</span><span class="marker-line"></span></div>
-                        <h2 id="highlights-title">Três referências para começar.</h2>
+                        <div class="section-marker"><span>Pesquisa externa</span><span class="marker-line"></span></div>
+                        <h2 id="search-title">Buscar no Google</h2>
                     </div>
-                    <p>Os textos que ajudam a entender os pilares técnicos e materiais reunidos nesta proposta.</p>
                 </div>
-                <div class="featured-docs">
-                    <article class="featured-doc reveal">
-                        <span class="doc-kicker">Segurança · 2017</span>
-                        <h3>Registro impresso do voto, autenticado e com garantia de anonimato</h3>
-                        <p>Artigo do SBSeg que apresenta uma dinâmica de conferência pelo eleitor, QR Code e assinatura digital EdDSA para autenticar o registro impresso sem distinguir votos iguais.</p>
-                        <div class="doc-byline">Rodrigo C. M. Coimbra, José R. M. Monteiro e Gladiston da S. Costa · TSE</div>
-                        <a class="doc-link" href="artigo-tse-voto-impresso.pdf" target="_blank" rel="noopener">
-                            <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> Ler artigo <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
-                        </a>
-                    </article>
-                    <article class="featured-doc reveal">
-                        <span class="doc-kicker">Materiais · 2009</span>
-                        <h3>Papel de plástico reciclado</h3>
-                        <p>Reportagem sobre pesquisa da UFSCar e testes em escala piloto de papel sintético feito com resíduos plásticos pós-consumo, incluindo propriedades e possíveis aplicações.</p>
-                        <div class="doc-byline">Pesquisa FAPESP · edição 155, janeiro de 2009</div>
-                        <a class="doc-link" href="papel_de_plastico%20(1).pdf" target="_blank" rel="noopener">
-                            <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> Ler reportagem <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
-                        </a>
-                    </article>
-                    <article class="featured-doc reveal">
-                        <span class="doc-kicker">Modelo mecatrônico · 2015/2016</span>
-                        <h3>Modelo brasileiro de votação mecatrônica independente de software</h3>
-                        <p>Proposta de equipamentos para identificação biométrica, impressão e coleta de cédulas, apuração e auditoria, com atenção à acessibilidade e à separação entre identidade e voto.</p>
-                        <div class="doc-byline">Ronaldo Moises Nadaf · Revista Democrática, TRE-MT</div>
-                        <a class="doc-link" href="Revista_Democratica_Modelo_Brasileiro_2015.pdf" target="_blank" rel="noopener">
-                            <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> Ler artigo <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
-                        </a>
-                    </article>
+                <div class="google-search reveal">
+                    <script async src="https://cse.google.com/cse.js?cx=9220533801715431d"></script>
+                    <div class="gcse-search"></div>
                 </div>
             </div>
         </section>
@@ -102,59 +77,77 @@
             <div class="container">
                 <div class="docs-section-heading reveal">
                     <div>
-                        <div class="section-marker"><span>Consulta e aprofundamento</span><span class="marker-line"></span></div>
-                        <h2 id="archive-title">Arquivo documental</h2>
+                        <div class="section-marker"><span>Acervo documental</span><span class="marker-line"></span></div>
+                        <h2 id="archive-title">Os documentos</h2>
                     </div>
-                    <p>Documentos técnicos, jurídicos e legislativos relacionados ao tema.</p>
+                    <p>Resumos para orientar a leitura; consulte os PDFs para conhecer o conteúdo integral e seu contexto.</p>
                 </div>
-                <div class="archive-tools reveal">
-                    <label class="archive-search">
-                        <i class="bi bi-search" aria-hidden="true"></i>
-                        <span class="visually-hidden">Buscar documentos</span>
-                        <input id="document-search" type="search" placeholder="Buscar por título, autor ou tema" autocomplete="off">
-                    </label>
-                    <label class="archive-filter">
-                        <span class="visually-hidden">Filtrar por categoria</span>
-                        <select id="document-category">
-                            <option value="all">Todas as categorias</option>
-                            <option value="proposta">Proposta</option>
-                            <option value="juridico">Jurídico</option>
-                            <option value="legislacao">Legislação</option>
-                        </select>
-                    </label>
-                    <span class="archive-count" id="document-count" aria-live="polite">7 documentos</span>
-                </div>
-                <div class="document-list" id="document-list">
-                    <article class="doc-entry reveal" data-category="proposta" data-search="monografia voto mecatronico ronaldo moises nadaf proposta sistema urna">
-                        <div class="doc-entry-copy"><span class="doc-kicker">Proposta · Monografia</span><h3>Monografia sobre o voto mecatrônico</h3><p>Estudo aprofundado do modelo, seus componentes e do processo de votação e apuração.</p></div>
-                        <a class="doc-link" href="Monografia_voto_mecatronico.pdf" target="_blank" rel="noopener" aria-label="Abrir Monografia sobre o voto mecatrônico em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                <div class="document-list">
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">TSE · Segurança e criptografia</span><h3>Novos rumos para o ecossistema da urna eletrônica</h3><p>O artigo descreve caminhos de evolução para a segurança dos equipamentos, softwares e serviços do ecossistema eleitoral. Entre os temas estão criptografia pós-quântica, computação multipartidária com compartilhamento de segredos e protocolos de votação fim a fim.</p><div class="doc-byline">José Monteiro, Lucas Guimarães, Saulo Lima, Marcus Amorim e Rodrigo Coimbra</div></div>
+                        <a class="doc-link" href="Artigo%20TSE%20criptografia%20ponta%20a%20ponta%20rodrigo%20coimbra.pdf" target="_blank" rel="noopener" aria-label="Abrir Novos rumos para o ecossistema da urna eletrônica em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
                     </article>
-                    <article class="doc-entry reveal" data-category="proposta" data-search="carta patente modelo brasileiro votação mecatronica inpi">
-                        <div class="doc-entry-copy"><span class="doc-kicker">Proposta · Propriedade intelectual</span><h3>Carta-patente do modelo mecatrônico</h3><p>Documento de patente relacionado ao Modelo Brasileiro de Votação Mecatrônica.</p></div>
-                        <a class="doc-link" href="carta-patente-voto-mecatronico.pdf" target="_blank" rel="noopener" aria-label="Abrir carta-patente do modelo mecatrônico em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">TSE · Registro impresso</span><h3>Registro impresso do voto, autenticado e com garantia de anonimato</h3><p>O trabalho propõe um formato de voto impresso que permita ao eleitor conferir sua escolha e que facilite a contagem e a verificação de autenticidade. Os mecanismos apresentados buscam preservar o anonimato mesmo quando votos iguais são registrados.</p><div class="doc-byline">Rodrigo Coimbra, José Roberto Menezes Monteiro e Gladiston da Silva Costa · SBSeg 2017</div></div>
+                        <a class="doc-link" href="artigo-tse-voto-impresso.pdf" target="_blank" rel="noopener" aria-label="Abrir artigo sobre registro impresso autenticado em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
                     </article>
-                    <article class="doc-entry reveal" data-category="juridico" data-search="inteiro teor adin 5889 stf ação direta inconstitucionalidade urna eletrônica">
-                        <div class="doc-entry-copy"><span class="doc-kicker">Jurídico · STF</span><h3>ADI 5.889 — inteiro teor</h3><p>Decisão do Supremo Tribunal Federal relacionada ao registro impresso do voto.</p></div>
-                        <a class="doc-link" href="inteiro_teor_adin_5889_stf.pdf" target="_blank" rel="noopener" aria-label="Abrir inteiro teor da ADI 5.889 em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">Segurança eleitoral · SBSeg</span><h3>Execução de código arbitrário na urna eletrônica brasileira</h3><p>O artigo relata vulnerabilidades identificadas em testes públicos de segurança e explica como falhas no armazenamento de chaves e bibliotecas sem autenticação poderiam permitir a execução de código. Os autores analisam os riscos para o sigilo do voto e a integridade do software.</p><div class="doc-byline">Diego F. Aranha, Pedro Barbosa, Thiago N. C. Cardoso, Caio Lüders e Paulo Matias</div></div>
+                        <a class="doc-link" href="artigo_urna_sbseg_diego_codigo_arbitrario.pdf" target="_blank" rel="noopener" aria-label="Abrir artigo sobre execução de código arbitrário em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
                     </article>
-                    <article class="doc-entry reveal" data-category="proposta" data-search="modelo brasileiro votação mecatronica independente software ronaldo nadaf">
-                        <div class="doc-entry-copy"><span class="doc-kicker">Proposta · Votação independente</span><h3>Modelo brasileiro de votação independente de software</h3><p>Documento complementar sobre o modelo de votação mecatrônica e seus princípios de independência e auditabilidade.</p></div>
-                        <a class="doc-link" href="Modelo_Brasileiro_de_Votacao_Independent_sb_seg_bh.pdf" target="_blank" rel="noopener" aria-label="Abrir documento sobre votação independente de software em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">INPI · Patente de invenção</span><h3>Equipamentos para impressão, coleta, auditoria e apuração de votos</h3><p>A carta-patente BR 102013018558-2 registra uma invenção de equipamentos para imprimir e recolher cédulas de segurança, além de auditar e apurar votos impressos. O documento identifica o titular, o inventor e as características técnicas protegidas.</p><div class="doc-byline">Ronaldo Moises Nadaf · expedida em 2021</div></div>
+                        <a class="doc-link" href="carta-patente-voto-mecatronico.pdf" target="_blank" rel="noopener" aria-label="Abrir carta-patente de equipamentos de votação em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
                     </article>
-                    <article class="doc-entry reveal" data-category="legislacao" data-search="emenda 88 plp 112 2021 voto impresso projeto lei">
-                        <div class="doc-entry-copy"><span class="doc-kicker">Legislação · PLP 112/2021</span><h3>Emenda 88</h3><p>Proposição legislativa relacionada ao Projeto de Lei Complementar 112/2021.</p></div>
-                        <a class="doc-link" href="DOC-EMENDA-88-PLP-1122021-20240605.pdf" target="_blank" rel="noopener" aria-label="Abrir Emenda 88 ao PLP 112/2021 em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-                    </article>
-                    <article class="doc-entry reveal" data-category="legislacao" data-search="emenda 342 plp 112 2021 voto impresso projeto lei">
-                        <div class="doc-entry-copy"><span class="doc-kicker">Legislação · PLP 112/2021</span><h3>Emenda 342</h3><p>Proposição legislativa relacionada ao Projeto de Lei Complementar 112/2021.</p></div>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">Legislação · PLP 112/2021</span><h3>Emenda 342</h3><p>A emenda propõe registrar digitalmente cada voto com assinatura e horário, imprimir o registro e depositá-lo automaticamente em local lacrado, sem contato manual. Também prevê a confirmação do eleitor e admite tecnologia alternativa que preserve sigilo e confirmação.</p><div class="doc-byline">Emenda apresentada pelo senador Esperidião Amin</div></div>
                         <a class="doc-link" href="DOC-EMENDA-342-PLP-1122021-20250610.pdf" target="_blank" rel="noopener" aria-label="Abrir Emenda 342 ao PLP 112/2021 em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
                     </article>
-                    <article class="doc-entry reveal" data-category="legislacao" data-search="emenda 381 plp voto impresso plenario projeto lei">
-                        <div class="doc-entry-copy"><span class="doc-kicker">Legislação · PLP 112/2021</span><h3>Emenda 381 — Plenário</h3><p>Documento legislativo de plenário relacionado ao voto impresso.</p></div>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">Legislação · PLP 112/2021</span><h3>Emenda 381 — Plenário</h3><p>A proposta altera o texto do substitutivo ao PLP 112/2021 para prever registro digital assinado, impressão automática e confirmação do voto pelo eleitor, sem identificação pessoal no registro. Também remete ao TSE procedimentos para proteger o sigilo em caso de falha do módulo impressor.</p><div class="doc-byline">Emenda apresentada pelo senador Esperidião Amin</div></div>
                         <a class="doc-link" href="DOC-EMENDA-381-PLEN-PLP-voto%20impresso.pdf" target="_blank" rel="noopener" aria-label="Abrir Emenda 381 de plenário em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
                     </article>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">Legislação · PLP 112/2021</span><h3>Emenda 88</h3><p>A emenda propõe atualizar e assinar digitalmente o arquivo de votos, imprimir cada registro e permitir ao eleitor conferir a correspondência entre sua escolha e o comprovante. Inclui prazo de implantação até a primeira eleição geral após a aprovação do projeto.</p><div class="doc-byline">Emenda à Comissão de Constituição e Justiça · 2024</div></div>
+                        <a class="doc-link" href="DOC-EMENDA-88-PLP-1122021-20240605.pdf" target="_blank" rel="noopener" aria-label="Abrir Emenda 88 ao PLP 112/2021 em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">STF · Controle de constitucionalidade</span><h3>ADI 5.889 — inteiro teor</h3><p>O STF declarou inconstitucionais o art. 59-A e seu parágrafo único da Lei 9.504/1997, que previam a impressão do voto. O acórdão conclui que o modelo híbrido poderia permitir a identificação do eleitor, ameaçando a liberdade e o sigilo do voto.</p><div class="doc-byline">Supremo Tribunal Federal · julgamento em 2020</div></div>
+                        <a class="doc-link" href="inteiro_teor_adin_5889_stf.pdf" target="_blank" rel="noopener" aria-label="Abrir inteiro teor da ADI 5.889 em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">Proposta · SBSeg 2014</span><h3>Modelo brasileiro de votação mecatrônica independente de software</h3><p>O artigo propõe equipamentos para identificar o eleitor, receber e apurar votos e gerar registros digitais e impressos auditáveis. Descreve uma mesa receptora independente, cédula de segurança e formas de conferência, incluindo recursos de acessibilidade.</p><div class="doc-byline">Ronaldo Moises Nadaf · XIV Simpósio Brasileiro de Segurança da Informação</div></div>
+                        <a class="doc-link" href="Modelo_Brasileiro_de_Votacao_Independent_sb_seg_bh.pdf" target="_blank" rel="noopener" aria-label="Abrir artigo sobre votação mecatrônica independente de software em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">Monografia · FGV e EJE-MT · 2013</span><h3>Proposta para o modelo mecatrônico de votação independente de software</h3><p>Trabalho de especialização que desenvolve a proposta de um sistema de votação mecatrônico. Discute o problema, os objetivos e a estrutura do modelo, com equipamentos e etapas para identificação, registro, coleta, apuração e auditoria dos votos.</p><div class="doc-byline">Ronaldo Moises Nadaf · orientação de Roberto Bevilacqua Otero</div></div>
+                        <a class="doc-link" href="Monografia_voto_mecatronico.pdf" target="_blank" rel="noopener" aria-label="Abrir monografia sobre o voto mecatrônico em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">Materiais · Pesquisa FAPESP · 2009</span><h3>Papel de plástico reciclado</h3><p>A reportagem apresenta pesquisa da UFSCar sobre papel sintético produzido com plástico pós-consumo. Descreve a preparação dos resíduos, a incorporação de minerais e testes de propriedades como resistência, textura e impressão, além de possíveis usos em rótulos e livros.</p><div class="doc-byline">Pesquisa FAPESP · edição 155</div></div>
+                        <a class="doc-link" href="papel_de_plastico%20(1).pdf" target="_blank" rel="noopener" aria-label="Abrir reportagem sobre papel de plástico reciclado em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">Segurança eleitoral · Relatório · 2013</span><h3>Vulnerabilidades no software da urna eletrônica brasileira</h3><p>Relatório baseado na participação dos autores nos Testes Públicos de Segurança do TSE. Registra vulnerabilidades que permitiram recuperar votos em ordem e discute falhas de projeto, implementação e práticas de desenvolvimento, além de recomendações para os mecanismos afetados.</p><div class="doc-byline">Diego F. Aranha, Marcelo Monte Karam, André de Miranda e Felipe Scarel</div></div>
+                        <a class="doc-link" href="relatorio-urna-diego%20aranha.pdf" target="_blank" rel="noopener" aria-label="Abrir relatório sobre vulnerabilidades no software da urna em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">Segurança eleitoral · Artigo em inglês · 2017</span><h3>The Return of Software Vulnerabilities in the Brazilian Voting Machine</h3><p>O artigo apresenta resultados de uma análise do software eleitoral em testes promovidos pelo TSE. Os autores descrevem como o compartilhamento de chaves e bibliotecas sem assinatura poderiam ser combinados para executar código e comprometer o sigilo do voto e a integridade do software.</p><div class="doc-byline">Diego F. Aranha e colaboradores</div></div>
+                        <a class="doc-link" href="report-voting-tps17_aranha_ingles.pdf" target="_blank" rel="noopener" aria-label="Abrir artigo em inglês sobre vulnerabilidades na urna em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">Proposta · Revista Democrática · 2015</span><h3>Modelo brasileiro de votação mecatrônica</h3><p>Artigo sobre a proposta de votação mecatrônica independente de software, com equipamentos dedicados à identificação, à votação e ao tratamento de cédulas. Apresenta a ideia de combinar registros verificáveis para apoiar conferência e auditoria.</p><div class="doc-byline">Ronaldo Moises Nadaf · Revista Democrática, TRE-MT</div></div>
+                        <a class="doc-link" href="Revista_Democratica_Modelo_Brasileiro_2015.pdf" target="_blank" rel="noopener" aria-label="Abrir artigo da Revista Democrática sobre o modelo mecatrônico em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">Pesquisa acadêmica · Blockchain</span><h3>Sistema de votação eletrônica baseado em assinatura cega e BigchainDB</h3><p>O artigo propõe um modelo digital de votação que combina blockchain e assinaturas cegas para buscar auditabilidade sem revelar a escolha do eleitor. Descreve as etapas de emissão da cédula, votação e apuração, e apresenta uma prova de conceito sem depender de conexão de rede durante a votação.</p><div class="doc-byline">Leonardo Pinto Guilherme, Luis Claudio Batista da Silva e Nilson Mori Lazarin · CEFET/RJ</div></div>
+                        <a class="doc-link" href="Sistema_de_Votacao_Eletronica_baseado_em.pdf" target="_blank" rel="noopener" aria-label="Abrir artigo sobre votação eletrônica com assinatura cega e BigchainDB em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="doc-entry reveal">
+                        <div class="doc-entry-copy"><span class="doc-kicker">Imprensa · Cuiabá · 2008</span><h3>Votos de urna de lona podem decidir vaga na Câmara</h3><p>A reportagem acompanha uma disputa por vaga na Câmara Municipal de Cuiabá entre Deucimar Silva e o suplente Marcus Fabrício, que tiveram a mesma votação. O texto relata a análise da Junta Apuradora sobre a possível anulação de votos registrados em uma urna de lona e seus efeitos no resultado.</p><div class="doc-byline">Romilson Dourado · RDNews</div></div>
+                        <a class="doc-link" href="urna%20anulada%20em%202008.pdf" target="_blank" rel="noopener" aria-label="Abrir reportagem sobre votos em urna de lona e vaga na Câmara em PDF">Abrir PDF <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    </article>
                 </div>
-                <p class="archive-empty" id="archive-empty" hidden>Nenhum documento corresponde a essa busca.</p>
                 <p class="archive-note">Os documentos são disponibilizados para consulta e estudo. As propostas descritas são conceituais e não representam posicionamento oficial das instituições citadas.</p>
             </div>
         </section>
@@ -164,12 +157,11 @@
         <div class="container footer-main">
             <div class="footer-brand"><a href="../index.html" aria-label="Voto Sustentável, início"><img src="../assets/img/logomarca150x70.png" alt="Voto Sustentável" width="150" height="70"></a></div>
             <div class="footer-about"><h2>Sobre a biblioteca</h2><p>Referências para conhecer, discutir e aprimorar a proposta Voto Sustentável e Mecatrônico.</p></div>
-            <nav class="footer-nav" aria-label="Menu do rodapé"><h2>Navegação</h2><a href="../index.html">Página inicial</a><a href="#destaques">Referências fundamentais</a><a href="#arquivo">Arquivo documental</a></nav>
+            <nav class="footer-nav" aria-label="Menu do rodapé"><h2>Navegação</h2><a href="../index.html">Página inicial</a><a href="#pesquisar">Buscar no Google</a><a href="#arquivo">Acervo documental</a></nav>
         </div>
         <div class="container footer-legal"><p><strong>Aviso:</strong> Conteúdo autoral e conceitual, em caráter propositivo. Não representa posição oficial do Tribunal Regional Eleitoral de Mato Grosso nem da Justiça Eleitoral.</p></div>
     </footer>
     <button class="back-to-top" type="button" aria-label="Voltar ao topo" title="Voltar ao topo"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
     <script src="../assets/js/landing.js" defer></script>
-    <script src="../assets/js/docs.js" defer></script>
 </body>
 </html>
